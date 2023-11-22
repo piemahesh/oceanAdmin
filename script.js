@@ -109,7 +109,6 @@ gridView.addEventListener("click", () => {
     datasHandle.forEach(e => {
         e.classList.add("h-52","flex-col");
         e.classList.remove("md:h-fit","md:p-5","md:w-full","md:flex-row","md:rounded-none");
-        // e.querySelector("#viewBtn").classList.add("flex")
         e.querySelector("#viewBtn").classList.remove("md:hidden");
         e.querySelectorAll("div").forEach(i =>{
             i.classList.add("justify-center");
@@ -127,8 +126,10 @@ listView.addEventListener("click", () => {
     cardContainer.classList.remove("md:grid-cols-3");
     datasHandle.forEach(e => {
         e.classList.add("md:h-fit","md:p-5","md:w-full","md:flex-row","md:rounded-none");
-        // e.classList.remove("h-52");
-        e.querySelector("#viewBtn").classList.add("md:hidden")
+        e.querySelector("#viewBtn").classList.add("md:hidden");
+        e.querySelectorAll("div").forEach(i =>{
+            i.classList.remove("justify-center");
+        })
     });
 });
 
