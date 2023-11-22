@@ -39,13 +39,13 @@
 
 
         <!-- navbar -->
-        <nav class="bg-[#3f4d8e] h-[100%] max-h-screen min-h-[1000px]  lg:flex p-8 z-30 fixed  -left-72 lg:left-0 lg:relative  flex-col gap-10 transition-all duration-1000  "
+        <nav class="bg-[#3f4d8e] h-[100%] max-h-screen min-h-[1000px]  z-30 lg:relative lg:left-0 -left-[300px] fixed flex-col gap-10 transition-all duration-1000  lg:flex p-8"
             id="navbar">
 
-            <div class="text-white pl-3 w-52 mt-3 mb-5">
+            <div class="text-white pl-3 w-52 mt-3 mb-3">
                 <img src="./img/oceanWhite.svg" alt="logo">
             </div>
-            <ul class="text-white fontFam flex flex-col relative  gap-5">
+            <ul class="text-white fontFam flex flex-col  gap-5">
                 <li
                     class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300">
                     <a href="./index.html">Dashboard</a>
@@ -62,12 +62,11 @@
                     class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300">
                     <a href="#">Logout</a>
                 <li>
-                
-            </ul>
-            <li class=" text-[2em] self-center absolute list-none right-5 bottom-64 text-white lg:hidden cursor-pointer transition-all duration-500"
+                <li class="relative text-[2em] self-center lg:hidden cursor-pointer transition-all duration-500"
                     id="closebtn">
-                    <i class="ri-arrow-left-line"></i>
-            </li>
+                    <i class="ri-close-circle-line"></i>
+                </li>
+            </ul>
         </nav>
         <!-- community -->
         <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col mt-5 relative ">
@@ -91,29 +90,6 @@
                     <p>Admin</p>
                 </div>
             </div>
-            <!-- active & new -->
-            <section class="flex flex-wrap sm:items-center justify-center gap-7 mt-20 xl:mt-12 ">
-                <div class="flex flex-col items-center w-full relative  sm:flex-1 p-5 sm:p-8 rounded-lg bg-[#3f4d8e]">
-                    <div class="flex gap-2">
-                        <img src="./img/user.svg" alt="ActiveSvg">
-                        <p class="text-white text-xs sm:text-xl fontFam">Active Recuiter</p>
-                    </div>
-                    <div>
-                        <h3 class="text-white  text-[1.5em] sm:text-[3em]">8</h3>
-                    </div>
-                    <div class="w-2 h-2 rounded-full cursor-pointer bg-green-400 absolute top-3 right-5"></div>
-                </div>
-                <div class="flex flex-col items-center w-full relative sm:flex-1 p-5 sm:p-8 rounded-lg bg-[#397c8f]">
-                    <div class="flex gap-2">
-                        <img src="./img/user.svg" alt="ActiveSvg">
-                        <p class="text-white text-xs sm:text-xl fontFam">New Request</p>
-                    </div>
-                    <div>
-                        <h3 class="text-white  text-[1.5em] sm:text-[3em]">3</h3>
-                    </div>
-                    <div class="w-2 h-2 rounded-full cursor-pointer bg-yellow-400 absolute top-3 right-5"></div>
-                </div>
-            </section>
             <!-- search and sort -->
             <section class="mt-7 flex flex-wrap gap-5  items-center justify-between">
                 <div
@@ -147,16 +123,16 @@
                 </div>
             </section>
             <!-- company list -->
-            <section class="mt-4 bg-white flex flex-col  ">
+            <section class="mt-4 bg-white flex flex-col">
                 <div class="flex flex-col p-5 ">
-                    <ul class="md:flex p-2  w-full fontFam hidden justify-between text-indigo-700 bg-slate-50 ">
-                        <li class="w-1/4">Full Name</li>
-                        <li class="w-1/4">Company Name</li>
-                        <li class="w-1/4">Company Email</li>
-                        <li class="w-1/4">Interested In</li>
+                    <ul class="flex p-4 w-full fontFam justify-between text-indigo-700 bg-slate-50">
+                        <li class="bg-">Full Name</li>
+                        <li>Company Name</li>
+                        <li>Company Email</li>
+                        <!-- <li>Interested In</li> -->
                     </ul>
                     <!-- --datas-- -->
-                    <div id="items" class="gap-2 flex flex-wrap min-[400px]:grid md:grid-cols-1 grid-cols-2 w-full   items-center justify-center ">
+                    <div id="items" class="gap-2 flex flex-col   items-center justify-center">
                     </div>
                     <div id="PageContainer" class="pagination pagination-container
                      flex items-center justify-center mt-4 w-full mb-6">
