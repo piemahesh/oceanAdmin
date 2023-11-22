@@ -31,7 +31,7 @@
 <body class=" bg-slate-100">
 
     <!-- main -->
-    <section class="h-screen relative flex items-start mx-auto ">
+    <section class="max-h-full flex  mx-auto ">
         <!-- leaf-svg -->
 
         <div class="absolute w-24 sm:w-auto top-0 right-0"><img src="./img/oaLeaf.svg"
@@ -39,13 +39,13 @@
 
 
         <!-- navbar -->
-        <nav class="bg-[#3f4d8e] h-[100%] max-h-screen min-h-screen min-w-[150px]  lg:flex p-2 md:p-8 z-30 fixed  -left-72 lg:left-0 lg:relative  flex-col gap-10 transition-all duration-1000  "
+        <nav class="bg-[#3f4d8e] min-w-[150px] fixed h-screen lg:h-auto lg:relative lg:flex p-2 md:p-8 z-30 -left-72 lg:left-0 flex-col gap-10 transition-all duration-1000  "
             id="navbar">
 
             <div class="text-white pl-3 w-52 mt-3 mb-5">
                 <img src="./img/oceanWhite.svg" alt="logo">
             </div>
-            <ul class="text-white fontFam flex flex-col gap-5">
+            <ul class="text-white  fontFam flex flex-col gap-5">
                 <li
                     class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300">
                     <a href="./index.html">Dashboard</a>
@@ -70,25 +70,31 @@
             </li>
         </nav>
         <!-- community -->
-        <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col mt-5 relative ">
+        <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col mt-5  ">
 
             <!-- top admin -->
             <div
                 class="flex flex-col sm:flex-row items-center pr-0 justify-center sm:pr-32 sm:justify-between flex-nowrap  sm:mt-0">
 
-                <div class="flex flex-col items-start  gap-3  flex-nowrap">
+                <div class="flex justify-center items-center  gap-3  flex-nowrap">
                     <!-- menubar -->
-                    <div class="flex items-start justify-between gap-2">
-                        <div class="text-[#3f4d8e] text-[0.8rem] min-[400px]:text-[1.2rem] font-semibold sm:font-semibold lg:hidden min-[660px]:text-[1.5rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] fontFam cursor-pointer"
-                            id="sideNavbtn">
-                            <i class="ri-menu-unfold-line"></i>
-                        </div>
-                        <h1
-                            class="text-[0.8rem] min-[400px]:text-[1.4rem] font-semibold sm:font-semibold  min-[660px]:text-[1.6rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] text-[#3f4d8e] fontFam">
-                            OA Recuiter Community</h1>
+
+                    <div class="text-[#3f4d8e]  min-[400px]:text-[2rem] font-semibold sm:font-semibold lg:hidden min-[660px]:text-[1.5rem] md:text-[2rem] whitespace-nowrap  fontFam cursor-pointer"
+                        id="sideNavbtn">
+                        <i class="ri-menu-unfold-line"></i>
                     </div>
-                    <p class="text-slate-500 text-[0.8rem] min-[400px]:text-[1.2rem]  xl:text-[1.2em] text-start ">Welcome to Recuiter
-                        Admin Panel 😊</p>
+                    <div class="flex items-start flex-col justify-between gap-2">
+                        <h1
+                            class=" min-[400px]:text-[1.5rem] font-semibold sm:font-semibold  min-[660px]:text-[1.6rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] text-[#3f4d8e] fontFam">
+                            OA Recuiter Community
+                        </h1>
+
+                        <p class="text-slate-500  min-[440px]:text-[1.3rem] z-10  xl:text-[1.2em] text-start ">
+                            Welcome to Recuiter
+                            Admin Panel 😊
+                        </p>
+                    </div>
+
                 </div>
                 <div class="flex items-center justify-center gap-4 mt-5 sm:mt-0">
 
