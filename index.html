@@ -39,13 +39,13 @@
 
 
         <!-- navbar -->
-        <nav class="bg-[#3f4d8e] h-[100%] max-h-screen min-h-[1000px] min-w-[150px]  lg:flex p-2 md:p-8 z-30 fixed  -left-72 lg:left-0 lg:relative  flex-col gap-10 transition-all duration-1000  "
+        <nav class="bg-[#3f4d8e] h-[100%] max-h-screen min-h-screen min-w-[150px]  lg:flex p-2 md:p-8 z-30 fixed  -left-72 lg:left-0 lg:relative  flex-col gap-10 transition-all duration-1000  "
             id="navbar">
 
             <div class="text-white pl-3 w-52 mt-3 mb-5">
                 <img src="./img/oceanWhite.svg" alt="logo">
             </div>
-            <ul class="text-white fontFam flex flex-col relative  gap-5">
+            <ul class="text-white fontFam flex flex-col gap-5">
                 <li
                     class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300">
                     <a href="./index.html">Dashboard</a>
@@ -64,7 +64,7 @@
                 <li>
 
             </ul>
-            <li class=" text-[2em] self-center absolute list-none right-5 bottom-72 text-white lg:hidden cursor-pointer transition-all duration-500"
+            <li class=" text-[2em]  absolute list-none left-[25%] top-1/2 translate-x-11 translate-y-64 self-center lg:hidden text-white  cursor-pointer transition-all duration-500"
                 id="closebtn">
                 <i class="ri-arrow-left-line"></i>
             </li>
@@ -74,16 +74,21 @@
 
             <!-- top admin -->
             <div
-                class="flex flex-col sm:flex-row items-center pr-0 justify-center sm:pr-32 sm:justify-between    mt-16 sm:mt-0">
+                class="flex flex-col sm:flex-row items-center pr-0 justify-center sm:pr-32 sm:justify-between flex-nowrap  sm:mt-0">
 
-                <div class="flex flex-row  min-[1025px]:flex-col items-center  gap-3 lg:items-start flex-wrap">
+                <div class="flex flex-col items-start  gap-3  flex-nowrap">
                     <!-- menubar -->
-                    <div class="text-indigo-500 flex items-center justify-center lg:hidden  text-[1.5em] cursor-pointer" id="sideNavbtn">
-                        <i class="ri-menu-unfold-line"></i></div>
-                    <h1
-                        class="text-[0.8rem] font-semibold sm:font-semibold  min-[320px]:text-[1rem] whitespace-nowrap  xl:text-[2.5em] text-[#3f4d8e] fontFam">
-                        OA Recuiter Community</h1>
-                    <p class="text-slate-500 text-[0.8rem] min-[320px]:text-[1rem] xl:text-[1.2em] ">Welcome to Recuiter Admin Panel 😊</p>
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="text-[#3f4d8e] text-[0.8rem] min-[400px]:text-[1.2rem] font-semibold sm:font-semibold lg:hidden min-[660px]:text-[1.5rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] fontFam cursor-pointer"
+                            id="sideNavbtn">
+                            <i class="ri-menu-unfold-line"></i>
+                        </div>
+                        <h1
+                            class="text-[0.8rem] min-[400px]:text-[1.4rem] font-semibold sm:font-semibold  min-[660px]:text-[1.6rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] text-[#3f4d8e] fontFam">
+                            OA Recuiter Community</h1>
+                    </div>
+                    <p class="text-slate-500 text-[0.8rem] min-[400px]:text-[1.2rem]  xl:text-[1.2em] text-start ">Welcome to Recuiter
+                        Admin Panel 😊</p>
                 </div>
                 <div class="flex items-center justify-center gap-4 mt-5 sm:mt-0">
 
@@ -127,7 +132,7 @@
                         class="border border-gray-300 pl-5 pr-4 py-2 rounded-md w-full  focus:outline-none focus:ring focus:border-blue-500"
                         placeholder="Search" id="Search">
                 </div>
-                 <!-- list and grid view -->
+                <!-- list and grid view -->
                 <div class="flex items-center gap-5  w-full min-[715px]:w-80">
                     <div class="hidden md:flex">
                         <span class="bg-[#3f4d8e] cursor-pointer px-3 rounded-l-md btn text-white" id="listView"><i
@@ -141,7 +146,7 @@
                         <label for="Newest">Sort By</label>
                     </p>
                     <div class="w-full">
-                       
+
                         <select name="Newest" id="Newest"
                             class="text-slate-500  w-full border-gray-300 pl-3 pr-3 py-2 rounded-md focus:outline-none focus:ring  focus:border-[#397c8f]">
                             <option value="Newest">Newest</option>
@@ -154,7 +159,8 @@
             <!-- company list -->
             <section class="mt-4 bg-white flex flex-col  ">
                 <div class="flex flex-col p-5 ">
-                    <ul class="md:flex p-2  w-full fontFam hidden justify-between text-indigo-700 bg-slate-50 " id="companyContainer">
+                    <ul class="md:flex p-2  w-full fontFam hidden justify-between text-indigo-700 bg-slate-50 "
+                        id="companyContainer">
                         <li class="w-1/4">Full Name</li>
                         <li class="w-1/4">Company Name</li>
                         <li class="w-1/4">Company Email</li>

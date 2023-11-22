@@ -8,7 +8,7 @@ let data = [
 console.log(document.location.pathname);
 // console.log(document.location.pathname == "/index.html");
 const companyContainer = document.querySelector("#companyContainer");
-// console.log(companyContainer);
+
 // side nav bar'''====
 const navbar = document.querySelector("#navbar");
 const sideNavbtn = document.querySelector("#sideNavbtn");
