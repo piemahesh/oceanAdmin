@@ -36,7 +36,7 @@
 <body class=" bg-slate-100 ">
 
     <!-- main -->
-    <section class="max-h-full flex  mx-auto ">
+    <section class="flex mx-auto ">
         <!-- leaf-svg -->
 
         <div class="absolute w-12  min-[440px]:w-16 sm:w-20 md:w-auto top-0 right-0"><img src="./img/oaLeaf.svg"
@@ -44,7 +44,7 @@
 
 
         <!-- navbar -->
-        <nav class="bg-[#3f4d8e] min-w-[150px] fixed h-screen lg:h-auto lg:relative lg:flex p-2 md:p-8 z-30 -left-72 lg:left-0 flex-col gap-10 transition-all duration-1000  "
+        <nav class="bg-[#3f4d8e] min-w-[150px] fixed min-h-screen lg:relative lg:flex p-2 md:p-8 z-30 -left-72 lg:left-0 flex-col gap-10 transition-all duration-1000  "
             id="navbar">
 
             <div class="text-white pl-3 w-52 mt-3 mb-5">
@@ -75,11 +75,11 @@
             </li>
         </nav>
         <!-- community -->
-        <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col mt-1 min-[290px]:mt-5  ">
+        <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col ">
 
             <!-- top admin -->
             <div
-                class="flex flex-col sm:flex-row items-center pr-0 justify-center sm:pr-32 sm:justify-between flex-nowrap  sm:mt-0">
+                class="flex flex-col sm:flex-row items-start pr-0 justify-center md:pr-32 sm:justify-between flex-nowrap  sm:mt-0">
 
                 <div class="flex justify-center items-center  gap-3  flex-nowrap">
                     <!-- menubar -->
@@ -101,7 +101,7 @@
                     </div>
 
                 </div>
-                <div class="flex items-center justify-center gap-4 ml-2 mt-2 sm:mt-0">
+                <div class="flex items-center justify-center self-center gap-4 sm:mr-7  mt-4 sm:mt-0">
 
                     <div class="bg-indigo-900 w-12 flex flex-col rounded-full items-center justify-between"><i
                             class="ri-user-3-line text-white text-[2em]"></i></div>
@@ -112,9 +112,9 @@
             <!-- active & new -->
             <section class="flex flex-wrap sm:items-center justify-center gap-7 mt-20 xl:mt-12 ">
                 <div class="flex flex-col items-center w-full relative  sm:flex-1 p-5 sm:p-8 rounded-lg bg-[#3f4d8e]">
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 ">
                         <img src="./img/user.svg" alt="ActiveSvg">
-                        <p class="text-white text-xs sm:text-xl fontFam">Active Recuiter</p>
+                        <p class="text-white text-xs sm:text-xl whitespace-nowrap ">Active Recuiter</p>
                     </div>
                     <div>
                         <h3 class="text-white  text-[1.5em] sm:text-[3em]">8</h3>
@@ -124,7 +124,7 @@
                 <div class="flex flex-col items-center w-full relative sm:flex-1 p-5 sm:p-8 rounded-lg bg-[#397c8f]">
                     <div class="flex gap-2">
                         <img src="./img/user.svg" alt="ActiveSvg">
-                        <p class="text-white text-xs sm:text-xl fontFam">New Request</p>
+                        <p class="text-white text-xs sm:text-xl whitespace-nowrap  ">New Request</p>
                     </div>
                     <div>
                         <h3 class="text-white  text-[1.5em] sm:text-[3em]">3</h3>
@@ -136,12 +136,13 @@
             <section class="mt-7 flex flex-wrap gap-5  items-center justify-between">
                 <div
                     class="relative flex items-center w-full min-[715px]:w-80 searchbox justify-end sm:items-start  sm:justify-start">
-                    <div class="absolute inset-y-0  sm:left-72 flex items-center pointer-events-none">
-                        <i class="ri-menu-search-line text-slate-400 mr-4"></i>
-                    </div>
                     <input type="text"
                         class="border border-gray-300 pl-5 pr-4 py-2 rounded-md w-full  focus:outline-none focus:ring focus:border-blue-500"
                         placeholder="Search" id="Search">
+                    <div class="absolute right-0 self-center flex items-center pointer-events-none">
+                        <i class="ri-menu-search-line text-slate-400 mr-4"></i>
+                    </div>
+                    
                 </div>
                 <!-- list and grid view -->
                 <div class="flex items-center gap-5  w-full min-[715px]:w-80">
@@ -159,16 +160,17 @@
                     <div class="w-full">
 
                         <select name="Newest" id="Newest"
-                            class="text-slate-500  w-full border-gray-300 pl-3 pr-3 py-2 rounded-md focus:outline-none focus:ring  focus:border-[#397c8f]">
+                            class="text-slate-500 bg-white w-full border-gray-300 pl-5 pr-4 py-3 rounded-md focus:outline-none focus:ring  focus:border-[#397c8f]">
+                            
                             <option value="Newest">Newest</option>
-                            <option value="Newest">Oldest</option>
+                            <option value="Oldest">Oldest</option>
                         </select>
                     </div>
 
                 </div>
             </section>
             <!-- company list -->
-            <section class="mt-4 bg-white flex flex-col  ">
+            <section class="mt-4 bg-white rounded-lg flex flex-col  ">
                 <div class="flex flex-col p-5 ">
                     <ul class="md:flex p-2  w-full fontFam hidden justify-between text-indigo-700 bg-slate-50 "
                         id="companyContainer">

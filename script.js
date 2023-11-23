@@ -1,6 +1,8 @@
 let data = [
-    { fullName: "mahesh", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
-    { fullName: "mahesh", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
+    { fullName: "mahesh1", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
+    { fullName: "mahesh2", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
+    { fullName: "mahesh3", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
+    { fullName: "mahesh4", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
     { fullName: "mahesh", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
     { fullName: "mahesh", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
 ];
@@ -24,72 +26,24 @@ closebtn.addEventListener("click", () => {
 })
 // side nav end
 
-// pagination start
+// data show start
 
-function paginate(items, itemsPerPage, pageContainer) {
-    let currentPage = 1;
-    const totalPages = Math.ceil(items.length / itemsPerPage);
-
-    function showItems(page) {
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        const pageItems = items.slice(startIndex, endIndex);
-
-        const itemsContainer = document.querySelector("#items");
-        itemsContainer.innerHTML = "";
-
-        //   page items
-        pageItems.forEach((item) => {
-            const Dhtml = `
-            <div class = "flex inData items-center justify-between min-w-full  h-52 w-full md:h-fit mt-5 overflow-hidden md:p-5 md:w-full rounded-xl md:rounded-none
-            flex-col md:flex-row transition-all duration-200 font-light text-slate-950 border border-t-transparent border-solid border-b-blue-500 md:hover:scale-100 hover:scale-105 hover:cursor-pointer
-            hover:drop-shadow hover:shadow-sm hover:shadow-[#3f4e8e3f] hover:transition-all hover:duration-100 " id="datasHandle">
-           
-                <div class="flex items-center md:w-1/4">${item.fullName}</div>
-                <div class="flex items-center md:w-1/4">${item.companyName}</div>
-                <div class="flex items-center md:w-1/4">${item.companyEmail}</div>
-                <div class="flex items-center md:w-1/4">${item.interestedIn}</div>
-                <button class="flex items-center justify-center bg-[#397c8f] p-2 w-full md:hidden text-white" id= "viewBtn">View</button>
-                
-            </div>`;
-            itemsContainer.innerHTML = itemsContainer.innerHTML + Dhtml;
-        });
-    }
-
-    function setupPagination() {
-        const pagination = document.querySelector(pageContainer);
-        // console.log(pagination);
-        pagination.innerHTML = "";
-
-        for (let i = 1; i <= totalPages; i++) {
-            const link = document.createElement("a");
-            link.href = "#";
-            link.innerText = i;
-
-            if (i === currentPage) {
-                link.classList.add("active");
-            }
-
-            link.addEventListener("click", (event) => {
-                event.preventDefault();
-                currentPage = i;
-                showItems(currentPage);
-
-                const currentActive = pagination.querySelector(".active");
-                currentActive.classList.remove("active");
-                link.classList.add("active");
-            });
-
-            pagination.appendChild(link);
-        }
-    }
-
-    showItems(currentPage);
-    setupPagination();
-}
-const itemsPerPage = 5;
-const pageContainer = "#PageContainer";
-paginate(data, itemsPerPage, pageContainer);
+const itemsContainer = document.querySelector("#items");
+data.forEach((item) => {
+    const Dhtml = `
+    <div class = "flex inData  justify-between min-w-full pt-2 h-52 w-full md:h-fit mt-5 overflow-hidden md:p-5 md:w-full rounded-xl md:rounded-none
+    flex-col md:flex-row transition-all duration-200 font-light text-slate-950 border border-t-transparent border-solid border-b-blue-500 md:hover:scale-100 hover:scale-[1.01] hover:cursor-pointer
+    hover:drop-shadow hover:shadow-sm hover:shadow-[#3f4e8e3f] hover:transition-all hover:duration-100 " id="datasHandle">
+   
+        <div class="flex ml-5 order-2 md:order-1 md:ml-0 md:w-1/4">${item.fullName}</div>
+        <div class="flex ml-5 order-1 md:order-2 md:ml-0 md:w-1/4 justify-between border md:border-none border-transparent border-b-indigo-800">${item.companyName} <i class="ri-notification-2-line mr-3 md:hidden"></i> </div>
+        <div class="flex ml-5 order-3 md:order-3 md:ml-0 md:w-1/4">${item.companyEmail}</div>
+        <div class="flex ml-5 order-4 md:order-4 md:ml-0 md:w-1/4">${item.interestedIn}</div>
+        <button class="flex  order-5 md:order-5 items-center justify-center bg-[#397c8f] p-2 w-full md:hidden text-white" id= "viewBtn">View</button>
+        
+    </div>`;
+    itemsContainer.innerHTML = itemsContainer.innerHTML + Dhtml;
+});
 
 // list and grid functionality;
 var datasHandle = document.querySelectorAll("#datasHandle");
@@ -97,6 +51,8 @@ const companyContainer = document.querySelector("#companyContainer");
 const listView = document.querySelector("#listView");
 const gridView = document.querySelector("#gridView");
 const cardContainer = document.querySelector("#items");
+
+// 
 gridView.addEventListener("click", () => {
     gridView.classList.remove("bg-slate-300")
     gridView.classList.add("bg-[#3f4d8e]", "text-white", "transition-all", "duration-700");
@@ -108,10 +64,14 @@ gridView.addEventListener("click", () => {
     // datas loop;
     datasHandle.forEach(e => {
         e.classList.add("h-52","flex-col");
-        e.classList.remove("md:h-fit","md:p-5","md:w-full","md:flex-row","md:rounded-none");
+        e.classList.remove("md:h-fit","md:p-5","md:w-full","md:flex-row","md:rounded-none","justify-start");
         e.querySelector("#viewBtn").classList.remove("md:hidden");
+
         e.querySelectorAll("div").forEach(i =>{
-            i.classList.add("justify-center");
+            i.classList.add("md:ml-5");
+            i.classList.remove("md:ml-0");
+            console.log(i.getRootNode());
+            
         })
         
     });
@@ -129,7 +89,8 @@ listView.addEventListener("click", () => {
         e.classList.add("md:h-fit","md:p-5","md:w-full","md:flex-row","md:rounded-none");
         e.querySelector("#viewBtn").classList.add("md:hidden");
         e.querySelectorAll("div").forEach(i =>{
-            i.classList.remove("justify-center");
+            i.classList.add("md:ml-0");
+            i.classList.remove("md:ml-5");
         })
     });
 });
