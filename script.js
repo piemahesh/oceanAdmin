@@ -7,7 +7,6 @@ let data = [
 
 console.log(document.location.pathname);
 // console.log(document.location.pathname == "/index.html");
-const companyContainer = document.querySelector("#companyContainer");
 
 // side nav bar'''====
 const navbar = document.querySelector("#navbar");
@@ -43,7 +42,7 @@ function paginate(items, itemsPerPage, pageContainer) {
         pageItems.forEach((item) => {
             const Dhtml = `
             <div class = "flex inData items-center justify-between min-w-full  h-52 w-full md:h-fit mt-5 overflow-hidden md:p-5 md:w-full rounded-xl md:rounded-none
-            flex-col md:flex-row transition-all duration-200 font-thin text-slate-800 border border-t-transparent border-solid border-b-blue-500 md:hover:scale-100 hover:scale-105 hover:cursor-pointer
+            flex-col md:flex-row transition-all duration-200 font-light text-slate-950 border border-t-transparent border-solid border-b-blue-500 md:hover:scale-100 hover:scale-105 hover:cursor-pointer
             hover:drop-shadow hover:shadow-sm hover:shadow-[#3f4e8e3f] hover:transition-all hover:duration-100 " id="datasHandle">
            
                 <div class="flex items-center md:w-1/4">${item.fullName}</div>
@@ -94,7 +93,7 @@ paginate(data, itemsPerPage, pageContainer);
 
 // list and grid functionality;
 var datasHandle = document.querySelectorAll("#datasHandle");
-
+const companyContainer = document.querySelector("#companyContainer");
 const listView = document.querySelector("#listView");
 const gridView = document.querySelector("#gridView");
 const cardContainer = document.querySelector("#items");
@@ -105,6 +104,7 @@ gridView.addEventListener("click", () => {
     listView.classList.add("bg-slate-300");
     cardContainer.classList.add("md:grid-cols-3");
     cardContainer.classList.remove("md:grid-cols-1");
+    companyContainer.classList.remove("md:flex");
     // datas loop;
     datasHandle.forEach(e => {
         e.classList.add("h-52","flex-col");
@@ -124,6 +124,7 @@ listView.addEventListener("click", () => {
     gridView.classList.add("bg-slate-300");
     cardContainer.classList.add("md:grid-cols-1");
     cardContainer.classList.remove("md:grid-cols-3");
+    companyContainer.classList.add("md:flex");
     datasHandle.forEach(e => {
         e.classList.add("md:h-fit","md:p-5","md:w-full","md:flex-row","md:rounded-none");
         e.querySelector("#viewBtn").classList.add("md:hidden");

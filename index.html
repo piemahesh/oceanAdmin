@@ -15,6 +15,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <!-- scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,19 +27,19 @@
     <script src="tailwind.config.js"></script>
 
     <style>
-        .fontFam {
-            font-family: 'Poppins', sans-serif;
-        }
+       *{
+        font-family: 'Josefin Sans', sans-serif;
+       }
     </style>
 </head>
 
-<body class=" bg-slate-100">
+<body class=" bg-slate-100 ">
 
     <!-- main -->
     <section class="max-h-full flex  mx-auto ">
         <!-- leaf-svg -->
 
-        <div class="absolute w-24 sm:w-auto top-0 right-0"><img src="./img/oaLeaf.svg"
+        <div class="absolute w-12  min-[440px]:w-16 sm:w-20 md:w-auto top-0 right-0"><img src="./img/oaLeaf.svg"
                 class="object-cover object-center" alt="oaleaf"></div>
 
 
@@ -70,7 +75,7 @@
             </li>
         </nav>
         <!-- community -->
-        <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col mt-5  ">
+        <section class="p-5 w-full lg:w-10/12  max-w-[2200px] mx-auto flex flex-col mt-1 min-[290px]:mt-5  ">
 
             <!-- top admin -->
             <div
@@ -79,24 +84,24 @@
                 <div class="flex justify-center items-center  gap-3  flex-nowrap">
                     <!-- menubar -->
 
-                    <div class="text-[#3f4d8e]  min-[400px]:text-[2rem] font-semibold sm:font-semibold lg:hidden min-[660px]:text-[1.5rem] md:text-[2rem] whitespace-nowrap  fontFam cursor-pointer"
+                    <div class="text-[#3f4d8e]  min-[250px]:text-[1.7rem] font-semibold sm:font-semibold lg:hidden min-[660px]:text-[1.5rem] md:text-[2rem] whitespace-nowrap cursor-pointer"
                         id="sideNavbtn">
                         <i class="ri-menu-unfold-line"></i>
                     </div>
-                    <div class="flex items-start flex-col justify-between gap-2">
+                    <div class="flex items-start flex-col justify-between gap-0 lg:gap-2">
                         <h1
-                            class=" min-[400px]:text-[1.5rem] font-semibold sm:font-semibold  min-[660px]:text-[1.6rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] text-[#3f4d8e] fontFam">
+                            class=" min-[400px]:text-[1.5rem] font-semibold  min-[660px]:text-[1.6rem] md:text-[2rem] whitespace-nowrap  xl:text-[2.5em] text-[#3f4d8e] ">
                             OA Recuiter Community
                         </h1>
 
-                        <p class="text-slate-500  min-[440px]:text-[1.3rem] z-10  xl:text-[1.2em] text-start ">
+                        <p class="text-[#797676] whitespace-wrap sm:whitespace-nowrap  min-[440px]:text-[1.3rem] z-10  xl:text-[1.2em] text-start ">
                             Welcome to Recuiter
                             Admin Panel 😊
                         </p>
                     </div>
 
                 </div>
-                <div class="flex items-center justify-center gap-4 mt-5 sm:mt-0">
+                <div class="flex items-center justify-center gap-4 ml-2 mt-2 sm:mt-0">
 
                     <div class="bg-indigo-900 w-12 flex flex-col rounded-full items-center justify-between"><i
                             class="ri-user-3-line text-white text-[2em]"></i></div>
