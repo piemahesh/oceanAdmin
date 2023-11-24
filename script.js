@@ -42,18 +42,18 @@ const cardContainer = document.querySelector("#items");
 // list display
 data.forEach((item) => {
     const lhtml = `
-    <div class ="flex font-light py-5 pl-10 border border-transparent border-b-[#3f4d8e] hover:cursor-pointer hover:shadow-md hover:transition-all
+    <div class ="flex font-light py-5 pl-10 border border-transparent border-b-[#3f4e8e60] hover:border-b-[#3f4d8e] hover:cursor-pointer hover:shadow-md hover:transition-all
     hover:duration-300 mb-2 " "id="datasHandle">
    
-        <div class="flex md:w-1/4">${item.fullName}</div>
-        <div class="flex md:w-1/4 justify-between border md:border-none border-transparent border-b-indigo-800">${item.companyName}</div>
-        <div class="flex md:w-1/4">${item.companyEmail}</div>
-        <div class="flex md:w-1/4">${item.interestedIn}</div>
-        <button class="flex  order-5 md:order-5 items-center justify-center bg-[#397c8f] p-2 w-full md:hidden text-white" id= "viewBtn">View</button>
+        <div class="flex md:w-1/4"><span class="hover:text-[#397c8f] transition-colors duration-300">${item.fullName}</span></div>
+        <div class="flex md:w-1/4"><span class="hover:text-[#397c8f] transition-colors duration-300">${item.companyName}</span></div>
+        <div class="flex md:w-1/4"><span class="hover:text-[#397c8f] transition-colors duration-300">${item.companyEmail}</span></div>
+        <div class="flex md:w-1/4"><span class="hover:text-[#397c8f] transition-colors duration-300">${item.interestedIn}</span></div>
         
     </div>`;
     listContainer.innerHTML = listContainer.innerHTML + lhtml;
 });
+// grid display
 data.forEach((item)=>{
     const ghtml = `
     <div class ="h-60 max-w-[300px] min-w-full flex flex-col pt-3  font-light text-slate-950 rounded-lg justify-between overflow-hidden
@@ -82,12 +82,12 @@ data.forEach((item)=>{
         <span>${item.interestedIn}</span>
         </div>
 
-        <button class="flex  order-5 md:order-5 items-center justify-center bg-[#397c8f] p-2 w-full text-white" id= "viewBtn">View</button>
+        <button class="flex  order-5 md:order-5 items-center justify-center bg-[#397c8f] p-2 w-full font-semibold text-lg text-white" id= "viewBtn">View</button>
         
     </div>`;
     girdContainer.innerHTML = girdContainer.innerHTML + ghtml;
 })
-
+// gridView display
 gridView.addEventListener("click",()=>{
     gridView.classList.remove("bg-slate-300")
     gridView.classList.add("bg-[#3f4d8e]", "text-white", "transition-all", "duration-700");
@@ -97,6 +97,7 @@ gridView.addEventListener("click",()=>{
     companyContainer.classList.remove("md:flex");
     girdContainer.classList.remove("md:hidden");
 })
+// listView display
 listView.addEventListener("click",()=>{
     listView.classList.remove("bg-slate-300")
     listView.classList.add("bg-[#3f4d8e]", "text-white", "transition-all", "duration-700");
