@@ -28,8 +28,7 @@
 
     <style>
         * {
-            font-family: 'Josefin Sans', sans-serif;
-            
+            font-family: 'Josefin Sans', sans-serif;  
         }
     </style>
 </head>
@@ -57,8 +56,9 @@
                     <a href="./index.html">Dashboard</a>
                 </li>
                 <li
-                    class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300">
-                    <a href="./newReq.html">New Request</a>
+                    class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300"
+                     id="newRequest">
+                    <a href="#">New Request</a>
                 </li>
                 <!-- <li
                     class="w-44 h-10 pl-3 rounded-lg flex items-center transition-all duration-300  hover:bg-slate-50 hover:bg-opacity-10 hover:transition-all hover:duration-300">
@@ -179,7 +179,7 @@
                         <li class="w-1/4">Full Name</li>
                         <li class="w-1/4">Company Name</li>
                         <li class="w-1/4">Company Email</li>
-                        <li class="w-1/4 pl-1">Interested In</li>
+                        <li class="w-1/4 pl-1" id="interest">Interested In</li>
                     </ul>
                     <!-- --datas-- -->
                     <div id="listItems" class="md:flex flex-col hidden">
