@@ -11,8 +11,6 @@ let data = [
     { fullName: "mahesh4", companyName: "uber", companyEmail: "uber@gmail.com", interestedIn: ["python", "django"] },
 ];
 
-console.log(document.location.pathname);
-// console.log(document.location.pathname == "/index.html");
 
 // side nav bar'''====
 const navbar = document.querySelector("#navbar");
@@ -40,10 +38,11 @@ const listView = document.querySelector("#listView");
 const gridView = document.querySelector("#gridView");
 const cardContainer = document.querySelector("#items");
 const interestedIn = document.querySelector("#interest");
-console.log(interestedIn);
-console.log(interestedIn.innerHTML)
+const activeAndNew = document.querySelector("#activeAndNew");
+const currentPath = document.querySelector("#currentPath");
 
 
+// listComponent
 function listComponent(item, flag) {
     return `<div class ="flex font-light items-center py-5 pl-10 border border-transparent border-b-[#3f4e8e60] hover:border-b-[#3f4d8e] hover:cursor-pointer hover:shadow-md hover:transition-all
     hover:duration-300 mb-2 " "id="datasHandle">
@@ -54,11 +53,12 @@ function listComponent(item, flag) {
         <span class="hover:text-[#397c8f] transition-colors duration-300">${item.interestedIn}</span>
         </div>
          <div class="w-1/4 flex ${flag ? `flex` : `hidden`}">
-            <button class=" ring rounded-md w-1/4">View</button>
-            <button class=" ml-7 py-1 bg-green-700 text-white rounded-md w-1/4">Accept</button>
+            <button class=" ring rounded-md w-1/2">View</button>
+            <button class=" ml-7 py-1 bg-green-700 text-white rounded-md w-1/2">Accept</button>
         </div>
     </div>`
 }
+// gridComponent
 function gridComponent(item, flag) {
     return `<div class ="h-60 max-w-[300px] min-w-full flex flex-col pt-3  font-light text-slate-950 rounded-lg justify-between overflow-hidden
         transition-all duration-300 hover:scale-[1.01] hover:shadow-lg border" "id="datasHandle">
@@ -87,15 +87,20 @@ function gridComponent(item, flag) {
             </div>
             <div class = "order-5 flex">
             <button class="flex  items-center justify-center bg-[#397c8f] p-2 w-full font-semibold text-lg text-white" id= "viewBtn">View</button>
-            <button class="flex  items-center justify-center bg-[#3f4d8e]  w-full font-semibold text-lg text-white ${flag ? `flex` : `hidden`}">Accept</button> 
+            <button class="flex  items-center justify-center bg-[#3f4d8e]  w-full  font-semibold text-lg text-white ${flag ? `flex` : `hidden`}">Accept</button> 
             </div>
             
         </div>`;
 }
+
+// list and grid functionality
 newRequest.addEventListener("click", (e) => {
     listContainer.innerHTML = "";
     girdContainer.innerHTML = "";
-    interestedIn.innerHTML = "View or Edit"
+    interestedIn.innerHTML = "View or Accept";
+    activeAndNew.classList.add("hidden");
+    currentPath.classList.remove("hidden");
+
     data.slice(5).map((item) => {
         listContainer.innerHTML = listContainer.innerHTML + listComponent(item, true);
         girdContainer.innerHTML = girdContainer.innerHTML + gridComponent(item, true);
