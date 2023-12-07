@@ -48,7 +48,7 @@ const LogContainer = document.querySelector("#LogContainer");
 function logOutComponent(){
     
     
-    return (`<div class = "flex flex-col border border-[#397c8f]  bg-white rounded-xl h-56 w-[350px] p-7">
+    return (`<div class = "flex flex-col border border-[#397c8f] w-full  bg-white rounded-xl h-56  min-[400px]:w-[350px] p-7">
         <h3 class = "text-[#3f4d8e] font-semibold">Confirm logout</h3>
         <div class =" w-full border border-t-black mt-2"></div>
         <p class = "text-[#3f4d8e] mt-3 font-semibold">Are you sure want to log out ?</p>
