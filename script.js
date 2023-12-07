@@ -59,9 +59,9 @@ function logOutComponent(){
     </div>`);
 }
 
-const cancel = document.querySelector("#cancel");
-console.log(cancel);
 logoutBtn.addEventListener("click",()=>{
+    LogContainer.classList.add("flex");
+    LogContainer.classList.remove("hidden");
     LogContainer.innerHTML = logOutComponent();
 })
 
