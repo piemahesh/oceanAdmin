@@ -40,6 +40,30 @@ const cardContainer = document.querySelector("#items");
 const interestedIn = document.querySelector("#interest");
 const activeAndNew = document.querySelector("#activeAndNew");
 const currentPath = document.querySelector("#currentPath");
+// logout bar
+const logoutBtn = document.querySelector("#logoutBtn");
+const LogContainer = document.querySelector("#LogContainer");
+
+
+function logOutComponent(){
+    
+    
+    return (`<div class = "flex flex-col border border-[#397c8f]  bg-white rounded-xl h-56 w-[350px] p-7">
+        <h3 class = "text-[#3f4d8e] font-semibold">Confirm logout</h3>
+        <div class =" w-full border border-t-black mt-2"></div>
+        <p class = "text-[#3f4d8e] mt-3 font-semibold">Are you sure want to log out ?</p>
+        <div class = "flex  mt-10 justify-end font-semibold">
+            <button class = "w-24 py-2 rounded-3xl text-[#3f4d8e] bg-[#3f4e8e1e]" id ="cancel" onclick="clear()" >Cancel</button>
+            <button class = "w-24 py-2 rounded-3xl ml-5 text-white bg-[#3f4d8e]">OK</button>
+        </div>
+    </div>`);
+}
+
+const cancel = document.querySelector("#cancel");
+console.log(cancel);
+logoutBtn.addEventListener("click",()=>{
+    LogContainer.innerHTML = logOutComponent();
+})
 
 
 // listComponent
